@@ -8,10 +8,51 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .calc-container{
-    border: 1px solid black;
-    width: 50%;
+    outline: 3px solid black;
+    border-radius: 10px;
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.primary-calc-screen{
+    margin-top: 2em;
+    outline: 4px solid black;
+    border-radius: 3px;
+    width: 80%;
+    height: 10%;
+}
+
+.btn-rows{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 1.5em;
+}
+.button{
+    cursor: pointer;
+    display: flex;
+    outline: 2px solid black;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+#delete,#clear{
+    font-size: 1.05rem;
+}
+
+#equals{
+    flex: 1 1 auto;
+    font-size: 2rem;
 }

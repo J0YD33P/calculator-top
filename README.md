@@ -13,10 +13,9 @@ Pseudocode
 (A) Structure and Presentation
 
 1.1 Using html create div class container
-1.2 Within the div class container, create div class calc-container which will contain the calculator screen and buttons
-2.1 Create div class calc-screen which will be the screen which displays the calculation
+2.1 Within the div class container, create div class primary-calc-screen which will contain the primary calculator screen which displays the calculations. 
 3.1 Create div class button-container which will contain the buttons
-3.2 Create a grid of 18 buttons using the for loop and CreateElement function
+3.2 Create a grid of 18 buttons using the for loop and CreateElement function using Javascript
 3.3 Set the width of the buttons in percentage form. Height will be set to auto
 3.4 Provide class names for the buttons. The numbers should have the same id as the number 
 (for example: id of the number 1 should be "one")and have the class name as "number". Likewise, the operators should have their ids as their operation and have the class name as "operator". Finally, name the special buttons such as backspace, clear screen, equal to and decimal point with ids as per their function and their
