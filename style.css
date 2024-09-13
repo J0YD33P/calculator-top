@@ -14,8 +14,8 @@
 .calc-container{
     outline: 3px solid black;
     border-radius: 10px;
-    width: 30%;
-    height: 90%;
+    width: 400px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -23,11 +23,16 @@
 }
 
 .primary-calc-screen{
-    margin-top: 2em;
+    display: flex;
+    margin-top: 0.5em;
+    padding: 0 0.3em;
     outline: 4px solid black;
     border-radius: 3px;
-    width: 80%;
-    height: 10%;
+    width: 85%;
+    height: 20%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 3rem;
 }
 
 .btn-rows{
