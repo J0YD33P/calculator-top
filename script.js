@@ -1,6 +1,7 @@
 let firstOperand = '';
 let secondOperand = '';
 let operator = '';
+let displayValue = 0;
 
 function add(){
     let addition = Number(firstOperand) + Number(secondOperand);
@@ -23,23 +24,23 @@ function divide(){
 }
 
 function operate(){
-    let result;
     switch(operator){
         case 'add':
-            console.log("Performing Addition!")
-            result = add();
+            displayValue = add();
             break;
         case 'subtract':
-            result = subtract();
+            displayValue = subtract();
             break;
         case 'multiply':
-            result = multiply();
+            displayValue = multiply();
             break;
         case 'divide':
-            result = divide();
+            displayValue = divide();
             break;
     }
-    return result;
+    firstOperand = displayValue;
+    secondOperand = '';
+    return displayValue;
 }
 
 const calcContainer = document.querySelector(".calc-container");
@@ -50,19 +51,26 @@ calcContainer.addEventListener("click", (e) =>{
     if(target.classList.contains("number") && operator === ''){
         firstOperand += target.id;
         primaryCalculatorScreen.textContent = firstOperand;
-        console.log('first number: '+firstOperand)
     }
     else if(target.classList.contains("operator")){
         if(firstOperand === ''){
             firstOperand = 0;
         }
+        else if(operator !== ''){
+            primaryCalculatorScreen.textContent = operate();
+        }
         operator = target.id;
-        console.log(operator)
     }
     else if(target.classList.contains("number") && operator !== ''){
         secondOperand += target.id;
         primaryCalculatorScreen.textContent = secondOperand;
-        console.log('second number: '+secondOperand)
+    }
+    else if(target.id == 'clear'){
+        firstOperand = '';
+        secondOperand = '';
+        operator = '';
+        displayValue = 0;
+        primaryCalculatorScreen.textContent = displayValue;
     }
     else{
         primaryCalculatorScreen.textContent = operate();
